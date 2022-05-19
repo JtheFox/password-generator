@@ -1,4 +1,7 @@
 # password-generator
 Generate a secure password
 
-## Resourceds
+## Resources
+
+## Future Updates
+Recommended options and show user password strength based on criteria?
