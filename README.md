@@ -4,7 +4,9 @@ Generate a secure password
 ## Resources
 
 ## Future Updates
-Recommended options and show user password strength based on criteria?
+Recommended options and show user password strength based on criteria
+
+Update regex to require minimum amount of each criteria
 
 ## Todo: 
 Add click to copy on generated password
