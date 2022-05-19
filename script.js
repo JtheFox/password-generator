@@ -3,7 +3,7 @@ const rgxMap = new Map()
     .set('lowercase', '[a-z]')
     .set('uppercase', '[A-Z]')
     .set('numbers', '[0-9]')
-    .set('special-characters', '[!"#$%&\'()*+,-./:;<=>?@[\\]^ _`{|}~]'); 
+    .set('special-characters', '[!"#$%&\'()*+,-.\\/:;<=>?@[\\]^ _`{|}~]'); 
 
 function generatePassword() {
     // input validation to check if user has at least one checkbox selected
@@ -19,11 +19,21 @@ function generatePassword() {
     
     let passRgx = '';
     // use map to add values from checkboxes to regex string
-    for (let item of checkboxes) {
+    checkboxes.forEach((item, i) => {
         if (item.checked) {
             passRgx += rgxMap.get(item.value);
+            if (i+1 < checkboxes.length) {
+                passRgx += '|';
+            }
         }
-    }
+    });
+
+    // get minimum and maximum length values
+    const length = document.querySelectorAll('input[type="text"]');
+
+    // concat all values of regex string
+    passRgx = `(${passRgx}){${length.min},${length.max}}`;
+    console.log(passRgx);
 
     document.getElementById('generated').textContent = new RandExp(passRgx).gen();;
 }
