@@ -26,6 +26,10 @@ input[type$="submit"] {
     margin-right: 0;
 }
 
+.error {
+    color: red;
+}
+
 .output {
     background-color: #aaa;
 }

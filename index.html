@@ -17,7 +17,7 @@
             <p>Password Generator Description</p>
         </header>
 
-        <form action="" class="criteria">
+        <form class="criteria">
             <!-- password character types -->
             <div class="form-item">
                 <input type="checkbox" id="lowercase" name="lowercase" value="lowercase" checked>
@@ -39,15 +39,14 @@
             <div class="form-item">
                 <input type="text" id="min-length" name="min-length" placeholder="8">
                 <span> - </span>
-                <input type="text" id="max-length" name="max-length" placeholder="128">
+                <input type="text" id="max-length" name="max-length" placeholder="16">
                 <label for="max-length">Password Length <span>(min 8 - max 128)</span></label>
             </div>
-            <div class="formitem">
-                <input type="submit" onclick="generatePassword();">
+            <div class="form-item">
+                <input type="button" value="Generate Password" onclick="generatePassword();">
             </div>
+            <span class="error"></span>
         </form>
-
-        </div>
 
         <div class="output">
             <p id="generated-password">Your Password Will Be Generated Here</p>
