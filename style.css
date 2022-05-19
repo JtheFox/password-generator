@@ -9,6 +9,10 @@ main header {
     text-align: center;
 }
 
+.criteria {
+    margin: 2rem auto;
+}
+
 label span {
     opacity: 75%;
 }
@@ -16,4 +20,12 @@ label span {
 input[type$="text"] {
     max-width: 1.5rem;
     text-align: center;
+}
+
+input[type$="submit"] {
+    margin-right: 0;
+}
+
+.output {
+    background-color: #aaa;
 }

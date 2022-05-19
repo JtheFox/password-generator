@@ -42,10 +42,15 @@
                 <input type="text" id="max-length" name="max-length" placeholder="128">
                 <label for="max-length">Password Length <span>(min 8 - max 128)</span></label>
             </div>
+            <div class="formitem">
+                <input type="submit" onclick="generatePassword();">
+            </div>
         </form>
 
+        </div>
+
         <div class="output">
-            
+            <p id="generated-password">Your Password Will Be Generated Here</p>
         </div>
     </main>
 
