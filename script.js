@@ -13,7 +13,7 @@ function generatePassword() {
     // code snippet adapted from https://stackoverflow.com/questions/11787665/making-sure-at-least-one-checkbox-is-checked
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     if (!Array.prototype.slice.call(checkboxes).some(item => item.checked)) {
-        errorMsg.textContent = 'You must select at least one item.';
+        errorMsg.textContent = 'You must select at least one character type.';
         return;
     } else {
         // reset error if user resubmits with at least one item selected
