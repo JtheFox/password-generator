@@ -1,0 +1,19 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main header {
+    text-align: center;
+}
+
+label span {
+    opacity: 75%;
+}
+
+input[type$="text"] {
+    max-width: 1.5rem;
+    text-align: center;
+}

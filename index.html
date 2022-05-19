@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Password Generator</h1>
+            <p>Password Generator Description</p>
+        </header>
+
+        <form action="" class="criteria">
+            <!-- password character types -->
+            <div class="form-item">
+                <input type="checkbox" id="lowercase" name="lowercase" value="lowercase" checked>
+                <label for="lowercase">Lowercase <span>(a-z)</span></label>
+            </div>
+            <div class="form-item">
+                <input type="checkbox" id="uppercase" name="uppercase" value="uppercase" checked>
+                <label for="uppercase">Uppercase <span>(A-Z)</span></label>
+            </div>
+            <div class="form-item">
+                <input type="checkbox" id="numbers" name="numbers" value="numbers" checked>
+                <label for="numbers">Numbers <span>(0-9)</span></label>
+            </div>
+            <div class="form-item">
+                <input type="checkbox" id="special-characters" name="special-characters" value="special-characters" checked>
+                <label for="special-characters">Special Characters <span>(!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~)</span></label>
+            </div>
+            <!-- password length -->
+            <div class="form-item">
+                <input type="text" id="min-length" name="min-length" placeholder="8">
+                <span> - </span>
+                <input type="text" id="max-length" name="max-length" placeholder="128">
+                <label for="max-length">Password Length <span>(min 8 - max 128)</span></label>
+            </div>
+        </form>
+
+        <div class="output">
+            
+        </div>
+    </main>
+
+
+    
+</body>
+
+</html>
