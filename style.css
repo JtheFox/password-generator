@@ -13,35 +13,83 @@ main {
     justify-content: center;
 }
 
+/* header text */
 main header {
     text-align: center;
 }
 
+main header :is(h1,p) {
+    color: #000;
+}
+
+/* input criteria */
 .criteria {
     margin: 2rem auto;
-    padding: 1rem;
+    padding: 1.5rem 1rem 2rem;
+    border-radius: 1rem;
     background-color: #1a293d;
     color: white;
-    border-radius: 1rem;
+}
+
+.criteria .form-item {
+    display: flex;
+    margin: 0.5rem 3rem;
+}
+
+.criteria .form-item > :is(label, input[type$="checkbox"], span) {
+    padding: 0 0.5rem;
 }
 
 label span {
     opacity: 75%;
 }
 
-input[type$="text"] {
+input[type=number] {
     max-width: 1.5rem;
+    max-height: 1rem;
     text-align: center;
+    -moz-appearance: textfield;
 }
 
-input[type$="submit"] {
-    margin-right: 0;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
 }
 
 .error {
+    margin: 0 auto;
+    min-height: 1.5rem;
     color: red;
+    text-align: center;
 }
 
+.btn {
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: inherit;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 8px #000;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    background: #fff;
+    box-shadow: 0px 5px 8px #000;
+    color: #1a293d;
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 0px 3px 8px #000;
+}
+
+/* output display */
 .output {
     background-color: #aaa;
 }

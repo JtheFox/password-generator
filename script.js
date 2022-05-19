@@ -6,7 +6,7 @@ const rgxMap = new Map()
     .set('special-characters', '[!"#$%&\'()*+,-.\\/:;<=>?@[\\]^ _`{|}~]'); 
 
 function generatePassword() {
-    // input validation to check if user has at least one checkbox selected
+    // check if user has at least one checkbox selected
     // code snippet adapted from https://stackoverflow.com/questions/11787665/making-sure-at-least-one-checkbox-is-checked
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     if (!Array.prototype.slice.call(checkboxes).some(item => item.checked)) {
@@ -16,6 +16,8 @@ function generatePassword() {
         // reset error if user resubmits with at least one item selected
         document.getElementsByClassName('error')[0].textContent = ''; 
     }
+
+    // check if length values are valid
     
     let passRgx = '';
     // use map to add values from checkboxes to regex string
@@ -34,7 +36,6 @@ function generatePassword() {
    
     // concat all values of regex string
     passRgx = `(${passRgx}){${minLength},${maxLength}}`;
-    console.log(passRgx);
 
     // display generated password in output display
     document.getElementById('generated').textContent = new RandExp(passRgx).gen();;

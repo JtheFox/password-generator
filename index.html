@@ -14,7 +14,7 @@
 <body>
     <main>
         <header>
-            <h1>Password Generator</h1>
+            <h1>🔑Secure Password Generator🔒</h1>
             <p>Password Generator Description</p>
         </header>
 
@@ -38,15 +38,15 @@
             </div>
             <!-- password length -->
             <div class="form-item">
-                <input type="text" id="min-length" name="min-length" placeholder="8">
+                <input type="number" id="min-length" name="min-length" placeholder="8">
                 <span> - </span>
-                <input type="text" id="max-length" name="max-length" placeholder="16">
+                <input type="number" id="max-length" name="max-length" placeholder="16">
                 <label for="max-length">Password Length <span>(min 8 - max 128)</span></label>
             </div>
+            <p class="error"></p>
             <div class="form-item">
-                <input type="button" value="Generate Password" onclick="generatePassword();">
+                <input type="button" class="btn" value="Generate Password" onclick="generatePassword();">
             </div>
-            <span class="error"></span>
         </form>
 
         <div class="output">
