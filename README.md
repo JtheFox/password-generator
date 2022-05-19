@@ -32,4 +32,4 @@ Password Generator
 ## Future Updates
 - Recommended crtiera
 - Show password strength based on criteria
-- Minimum occurrences per character type in generated password
+- Update regex to require minimum usage of each selected character type
