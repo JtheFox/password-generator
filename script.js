@@ -29,10 +29,11 @@ function generatePassword() {
     });
 
     // get minimum and maximum length values
-    const length = document.querySelectorAll('input[type="text"]');
-
+    minLength = document.getElementById('min-length').value || '8'; 
+    maxLength = document.getElementById('max-length').value || '16'; 
+   
     // concat all values of regex string
-    passRgx = `(${passRgx}){${length.min},${length.max}}`;
+    passRgx = `(${passRgx}){${minLength},${maxLength}}`;
     console.log(passRgx);
 
     document.getElementById('generated').textContent = new RandExp(passRgx).gen();;
