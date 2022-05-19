@@ -36,5 +36,6 @@ function generatePassword() {
     passRgx = `(${passRgx}){${minLength},${maxLength}}`;
     console.log(passRgx);
 
+    // display generated password in output display
     document.getElementById('generated').textContent = new RandExp(passRgx).gen();;
 }
