@@ -21,8 +21,8 @@ function generatePassword() {
     }
 
     // get minimum and maximum length values
-    minLength = document.getElementById('min-length').value || 8;
-    maxLength = document.getElementById('max-length').value || 16; 
+    minLength = parseInt(document.getElementById('min-length').value) || 8;
+    maxLength = parseInt(document.getElementById('max-length').value) || 16; 
 
     // check if length values are valid
     if (minLength < 8) {
