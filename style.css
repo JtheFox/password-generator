@@ -32,8 +32,8 @@ main header :is(h1,p) {
     padding: 1.5rem 1rem;
     border-radius: 1rem;
     background: #1a293d;
-    color: white;
     box-shadow: -0.2rem 0.2rem #060e18;
+    color: white;
 }
 
 .criteria .form-item {
@@ -52,10 +52,10 @@ label span {
 input[type=number] {
     max-width: 1.8rem;
     max-height: 1rem;
+    border: none;
+    border-radius: 0.5rem;
     text-align: center;
     -moz-appearance: textfield;
-    border-radius: 0.5rem;
-    border: none;
 }
 
 input::-webkit-outer-spin-button,
@@ -65,11 +65,11 @@ input::-webkit-inner-spin-button {
 }
 
 .error {
-    margin: 0 auto;
     min-height: 1.5em;
+    margin: 0 auto;
     color: #ff0000;
-    text-align: center;
     font-size: 18px;
+    text-align: center;
 }
 
 .btn {
@@ -80,14 +80,14 @@ input::-webkit-inner-spin-button {
     background: #dfdfdf;
     box-shadow: 0px 4px 0px #999;
     color: #000;
+    font-family: inherit;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: inherit;
 }
 
 .btn:hover {
-    box-shadow: 0px 4px 0px #bbb;
     background: #fff;
+    box-shadow: 0px 4px 0px #bbb;
     color: #1a293d;
 }
 
@@ -100,20 +100,20 @@ input::-webkit-inner-spin-button {
 .output {
     display: flex;
     justify-content: center;
-    min-width: 35%;
-    max-width: 400px;
+    min-width: 30%;
+    max-width: 600px;
     overflow-x: hidden;
-    word-wrap: break-word;
     word-break: break-all;
+    word-wrap: break-word;
 }
 
 .modal {
-    opacity: 0%;
     position: absolute;
-    transform: translateY(-1.3rem);
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 1rem;
     padding: 0.5rem 0.75rem;
+    transform: translateY(-1.3rem);
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0%;
     transition: opacity 0.1s linear;
 }
 
@@ -122,12 +122,12 @@ input::-webkit-inner-spin-button {
 }
 
 .output p {
-    text-align: center;
-    background-color: #333;
-    box-shadow: -0.2rem 0.2rem 0.05rem #111 inset;
-    border-radius: 1rem;
     width: 75%;
     padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    background-color: #333;
+    box-shadow: -0.2rem 0.2rem 0.05rem #111 inset;
+    text-align: center;
     cursor: pointer;
     user-select: none;
 }
