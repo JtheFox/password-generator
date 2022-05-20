@@ -54,6 +54,19 @@ function generatePassword() {
     document.getElementById('generated').textContent = new RandExp(passRgx).gen();;
 }
 
+// copy to clipboard & modal display functions
 function copy(text) {
     navigator.clipboard.writeText(text);
+    const modal = document.getElementsByClassName('modal')[0];
+    modal.classList.add('show');
+}
+
+window.onclick = function(event) {
+    if (event.target == document.getElementById('generated')) {
+        return;
+    }
+    let modal = document.getElementsByClassName('modal')[0];
+    if (event.target != modal && modal.classList.contains('show')) {
+        modal.classList.remove('show');
+    }
 }
