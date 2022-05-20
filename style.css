@@ -118,6 +118,15 @@ input::-webkit-inner-spin-button {
     user-select: none;
 }
 
+p.copied {
+    animation: flash ease-in-out 0.2s 10;
+}
+
+@keyframes flash {
+    from { background-color: #333; }
+    to { background-color: #bbb;}
+}
+
 .output p::selection {
     background-color: rgb(0, 255, 242);
     color: #000;
