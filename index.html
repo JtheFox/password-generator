@@ -18,7 +18,7 @@
             <p>Password Generator Description</p>
         </header>
 
-        <form class="criteria">
+        <section class="criteria">
             <!-- password character types -->
             <div class="form-item">
                 <input type="checkbox" id="lowercase" name="lowercase" value="lowercase" checked>
@@ -47,11 +47,13 @@
             <div class="form-item">
                 <input type="button" class="btn" value="Generate Password" onclick="generatePassword();">
             </div>
-        </form>
+        </section>
 
-        <div class="output">
-            <p id="generated">Your Password Will Be Generated Here</p>
-        </div>
+        <section class="output">
+            <div class="output-text">
+                <p id="generated">Your Password Will Be Generated Here</p>
+            </div>
+        </section>
     </main>
 
 
