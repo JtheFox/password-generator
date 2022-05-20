@@ -23,6 +23,7 @@ function generatePassword() {
     // get minimum and maximum length values
     minLength = document.getElementById('min-length').value || '8';
     maxLength = document.getElementById('max-length').value || '16'; 
+    console.log(minLength - maxLength);
 
     // check if length values are valid
     if (minLength < 8) {
@@ -31,12 +32,11 @@ function generatePassword() {
     } else if (maxLength > 128) {
         errorMsg.textContent = "Maximum length is too long.";
         return;
-    } else if (minLength < maxLength) { // why does < work but not > ?
+    } if (minLength < maxLength) { // why does < work but not > ?
         errorMsg.textContent = "Minimum length must be shorter than maximum length.";
         return;
     }
     
-    console.log('Creating RegExp string');
     let passRgx = '';
     // use map to add values from checkboxes to regex string
     checkboxes.forEach((item, i) => {
@@ -53,4 +53,8 @@ function generatePassword() {
 
     // display generated password in output display
     document.getElementById('generated').textContent = new RandExp(passRgx).gen();;
+}
+
+function copy(text) {
+    navigator.clipboard.writeText(text);
 }
