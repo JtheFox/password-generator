@@ -21,9 +21,9 @@ function generatePassword() {
     }
 
     // get minimum and maximum length values
-    minLength = document.getElementById('min-length').value || '8';
-    maxLength = document.getElementById('max-length').value || '16'; 
-    console.log(minLength - maxLength);
+    minLength = document.getElementById('min-length').value || 8;
+    maxLength = document.getElementById('max-length').value || 16; 
+    console.log(minLength, maxLength, minLength < maxLength);
 
     // check if length values are valid
     if (minLength < 8) {
@@ -32,7 +32,7 @@ function generatePassword() {
     } else if (maxLength > 128) {
         errorMsg.textContent = "Maximum length is too long.";
         return;
-    } if (minLength < maxLength) { // why does < work but not > ?
+    } else if (minLength > maxLength) { 
         errorMsg.textContent = "Minimum length must be shorter than maximum length.";
         return;
     }
