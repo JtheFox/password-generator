@@ -45,8 +45,12 @@ main header :is(h1,p) {
     padding: 0 0.5rem;
 }
 
-label span {
+label + span {
     opacity: 75%;
+    overflow-x: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
+    padding-left: 0px !important;
 }
 
 input[type=number] {
