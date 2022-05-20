@@ -23,7 +23,6 @@ function generatePassword() {
     // get minimum and maximum length values
     minLength = document.getElementById('min-length').value || 8;
     maxLength = document.getElementById('max-length').value || 16; 
-    console.log(minLength, maxLength, minLength < maxLength);
 
     // check if length values are valid
     if (minLength < 8) {
