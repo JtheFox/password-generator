@@ -31,6 +31,9 @@ function generatePassword() {
     } else if (maxLength > 128) {
         errorMsg.textContent = "Maximum length is too long.";
         return;
+    } else if (minLength > maxLength) {
+        errorMsg.textContent = "Minimum length must be shorter than maximum length.";
+        return;
     }
     
     let passRgx = '';
