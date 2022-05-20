@@ -107,6 +107,15 @@ input::-webkit-inner-spin-button {
     word-break: break-all;
 }
 
+.modal {
+    display: none;
+    position: absolute;
+    transform: translateY(-1.3rem);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    padding: 0.5rem 0.75rem;
+}
+
 .output p {
     text-align: center;
     background-color: #333;
