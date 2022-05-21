@@ -27,7 +27,7 @@ header :is(h1,p) {
 }
 
 header p {
-    max-width: 60%;
+    max-width: 40%;
     margin: 1rem auto;
 }
 
