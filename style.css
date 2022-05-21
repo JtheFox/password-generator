@@ -38,6 +38,7 @@ main header :is(h1,p) {
 
 .criteria .form-item {
     display: flex;
+    flex-wrap: wrap;
     margin: 0.5rem 3rem;
 }
 
