@@ -160,4 +160,8 @@ input::-webkit-inner-spin-button {
     .criteria, .output {
         margin: 1rem;
     }
+
+    #generated {
+        font-size: 0.9rem;
+    }
 }
