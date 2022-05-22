@@ -28,7 +28,10 @@ header :is(h1,p) {
 
 header p {
     max-width: 40%;
-    margin: 1rem auto;
+    margin: 0.7rem auto;
+    padding: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
 }
 
 /* input criteria */
