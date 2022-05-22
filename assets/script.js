@@ -37,22 +37,49 @@ function generatePassword() {
     }
     
     let passRgx = '';
+    let validCriteria = [];
     // use map to add values from checkboxes to regex string
     checkboxes.forEach((item, i) => {
         if (item.checked) {
-            passRgx += rgxMap.get(item.value);
+            criteriaRgx = rgxMap.get(item.value)
+            passRgx += criteriaRgx;
+            validCriteria.push(criteriaRgx);
         }
     });
-   
+
     // concat all values of regex string
     passRgx = `^[${passRgx}]{${minLength},${maxLength}}$`;
-    console.log(passRgx);
+
+    // generate password with minimum of 2 of each selected criteria
+    let genPass = '';
+    let genAttempts = 0;
+    do {
+        genPass = new RandExp(passRgx, 'gi').gen();
+        genAttempts++;
+    } while (!validatePassword(genPass, validCriteria));
+    console.log(`Password successfully generated in ${genAttempts} attempts`);
 
     // display generated password in output display
-    document.getElementById('generated').textContent = new RandExp(passRgx, 'gi').gen();
-    /* defaultregexp with all criteria: 
+    document.getElementById('generated').textContent = genPass;
+    /* default regex with all criteria: 
         /^[a-zA-Z0-9!"#$%&'()*+,\-.\/:;<=>?@\[\]^_`{|}~]{8,16}$/gi
     */
+}
+
+function validatePassword(password, criteria) {
+    let valid = true;
+
+    // mark generated password invalid if character type occurs less than 2 times
+    for (const value of criteria) {
+        const rgxMatch = password.match(new RegExp(`[${value}]`, 'g')) || [];
+        if (rgxMatch.length < 2) {
+            valid = false;
+            return valid;
+        }
+    }
+
+    // return if password satisfies criteria
+    return valid;
 }
 
 // copy to clipboard & modal display functions
@@ -71,3 +98,4 @@ window.onclick = function(event) {
         modal.classList.remove('show');
     }
 }
+
