@@ -51,7 +51,7 @@ function generatePassword() {
     passRgx = `(${passRgx}){${minLength},${maxLength}}`;
 
     // display generated password in output display
-    document.getElementById('generated').textContent = new RandExp(passRgx).gen();;
+    document.getElementById('generated').textContent = new RandExp(passRgx).gen();
 }
 
 // copy to clipboard & modal display functions
