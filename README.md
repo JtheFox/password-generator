@@ -1,5 +1,4 @@
 # Password Generator
-**Disclaimer:** I completed this assignment before realizing there was starter code, it is my fault for not realizing and properly following the instructions. That being said, I kept the page I designed because I feel it properly satisfies the acceptance criteria and delivers a good user experience.
 
 ## Table of Contents
 1. [Description](#description)
@@ -26,5 +25,5 @@ This is a website I designed from scratch that allows the user to generate a pas
 
 ## Future Updates
 - Add criteria reset button
-- Recommended crtiera
+- Recommended password critiera & information about strong passwords
 - Show password strength based on criteria
