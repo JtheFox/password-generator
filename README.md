@@ -17,7 +17,7 @@ This is a website I designed from scratch that allows the user to generate a pas
 - Click on the generated password to copy the text to your clipboard
 
 ## Visuals
-![Website Image]()
+![Website Image](./assets/images/Password-Generator.png)
 
 ## Resources
 - [Live Site](https://jthefox.github.io/password-generator/)
