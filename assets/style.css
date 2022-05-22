@@ -30,8 +30,8 @@ header p {
     max-width: 40%;
     margin: 0.7rem auto;
     padding: 0.3rem;
-    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* input criteria */
@@ -55,11 +55,11 @@ header p {
 }
 
 label + span {
-    opacity: 75%;
+    padding-left: 0px !important;
     overflow-x: hidden;
     word-break: break-all;
+    opacity: 75%;
     word-wrap: break-word;
-    padding-left: 0px !important;
 }
 
 input[type=number] {
@@ -128,6 +128,7 @@ input::-webkit-inner-spin-button {
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 0%;
     transition: opacity 0.1s linear;
+    user-select: none;
 }
 
 .modal.show {
