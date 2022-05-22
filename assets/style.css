@@ -22,10 +22,6 @@ header {
     text-align: center;
 }
 
-header :is(h1,p) {
-    color: #000;
-}
-
 header p {
     max-width: 40%;
     margin: 0.7rem auto;
@@ -147,8 +143,18 @@ input::-webkit-inner-spin-button {
 }
 
 @media only screen and (max-width: 600px) {
+    html {
+        font-size: smaller;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin: 0.5rem 0 0;
+    }
+    
     header p {
-        max-width: 85%;
+        max-width: 90%;
+        margin-bottom: 0;
     }
     
     .criteria, .output {
