@@ -3,7 +3,7 @@ const rgxMap = new Map()
     .set('lowercase', '[a-z]')
     .set('uppercase', '[A-Z]')
     .set('numbers', '[0-9]')
-    .set('special-characters', '[!"#$%&\'()*+,-.\\/:;<=>?@[\\]^ _`{|}~]'); 
+    .set('special-characters', '[!"#$%&\'()*+,\\-.\\/:;<=>?@\\[\\]^ _`{|}~]'); 
 
 function generatePassword() {
     // grab error message element
@@ -51,7 +51,11 @@ function generatePassword() {
     passRgx = `(${passRgx}){${minLength},${maxLength}}`;
 
     // display generated password in output display
+    console.log(passRgx);
     document.getElementById('generated').textContent = new RandExp(passRgx).gen();
+    /* defaultregexp with all criteria: 
+        ([a-z]|[A-Z]|[0-9]|[!"#$%&'()*+,\-.\/:;<=>?@\[\]^ _`{|}~]){8,16}
+    */
 }
 
 // copy to clipboard & modal display functions
