@@ -1,9 +1,9 @@
 // create map for checkbox values to regex
 const rgxMap = new Map()
-    .set('lowercase', '[a-z]')
-    .set('uppercase', '[A-Z]')
-    .set('numbers', '[0-9]')
-    .set('special-characters', '[!"#$%&\'()*+,\\-.\\/:;<=>?@\\[\\]^ _`{|}~]'); 
+    .set('lowercase', 'a-z')
+    .set('uppercase', 'A-Z')
+    .set('numbers', '0-9')
+    .set('special-characters', '!"#$%&\'()*+,\\-.\\/:;<=>?@\\[\\]^_`{|}~'); 
 
 function generatePassword() {
     // grab error message element
@@ -41,20 +41,17 @@ function generatePassword() {
     checkboxes.forEach((item, i) => {
         if (item.checked) {
             passRgx += rgxMap.get(item.value);
-            if (i+1 < checkboxes.length) {
-                passRgx += '|';
-            }
         }
     });
    
     // concat all values of regex string
-    passRgx = `(${passRgx}){${minLength},${maxLength}}`;
+    passRgx = `^[${passRgx}]{${minLength},${maxLength}}$`;
+    console.log(passRgx);
 
     // display generated password in output display
-    console.log(passRgx);
-    document.getElementById('generated').textContent = new RandExp(passRgx).gen();
+    document.getElementById('generated').textContent = new RandExp(passRgx, 'gi').gen();
     /* defaultregexp with all criteria: 
-        ([a-z]|[A-Z]|[0-9]|[!"#$%&'()*+,\-.\/:;<=>?@\[\]^ _`{|}~]){8,16}
+        /^[a-zA-Z0-9!"#$%&'()*+,\-.\/:;<=>?@\[\]^_`{|}~]{8,16}$/gi
     */
 }
 
