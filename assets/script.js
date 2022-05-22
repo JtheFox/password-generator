@@ -90,12 +90,8 @@ function copy(text) {
 }
 
 window.onclick = function(event) {
-    if (event.target == document.getElementById('generated')) {
-        return;
-    }
-    let modal = document.getElementsByClassName('modal')[0];
-    if (event.target != modal && modal.classList.contains('show')) {
-        modal.classList.remove('show');
+    if (event.target !== document.getElementById('generated')) {
+        document.getElementsByClassName('modal')[0].classList.remove('show');
     }
 }
 
