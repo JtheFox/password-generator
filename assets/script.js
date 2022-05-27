@@ -54,7 +54,7 @@ function generatePassword() {
     let genPass = '';
     let genAttempts = 0;
     do {
-        genPass = new RandExp(passRgx, 'gi').gen();
+        genPass = new RandExp(passRgx, 'g').gen();
         genAttempts++;
     } while (!validatePassword(genPass, validCriteria));
     console.log(`Password successfully generated in ${genAttempts} attempts`);
