@@ -19,8 +19,8 @@ This is a website I designed from scratch that allows the user to generate a pas
 ![Website Image](./assets/images/Password-Generator.png)
 
 ## Resources
-- [Live Site](https://jthefox.github.io/password-generator/)
-- [Online Repository](https://github.com/JtheFox/password-generator)
+- [Live Site](https://jsonfox.github.io/password-generator/)
+- [Online Repository](https://github.com/jsonFox/password-generator)
 - [RandExp](https://github.com/fent/randexp.js)
 
 ## Future Updates
